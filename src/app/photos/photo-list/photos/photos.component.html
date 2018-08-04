@@ -1,0 +1,14 @@
+<div class="container">
+<ol class="list-unstyled">
+    <li *ngFor="let cols of rows" class="row">
+      <div *ngFor="let col of cols" class="col-4">
+        <app-photo
+          [url]="col.url"
+          [alt]="col.alt"
+          width="400"
+          height="400">
+        </app-photo>
+      </div>
+    </li>
+  </ol>
+</div>
