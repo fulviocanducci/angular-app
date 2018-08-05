@@ -4,8 +4,10 @@
         class="roundend"
         type="search"
         placeholder="search ..."
-        (keyup)="filter = $event.target.value"
+        (keyup)="debounce.next($event.target.value)"
         autofocus/>
   </form>
 </div>
 <app-photos [photos]="photos | filterByDescription: filter"></app-photos>
+
+<app-load-button (click)="load()" [hasMore]="hasMore"></app-load-button>
