@@ -3,14 +3,20 @@
     Sorry no Photos ...
   </p>
   <ol class="list-unstyled">
-    <li *ngFor="let cols of rows" class="row">
-      <div *ngFor="let col of cols" class="col-4">
-        <app-photo
-          [url]="col.url"
-          [alt]="col.alt"
-          width="400"
-          height="400">
-        </app-photo>
+    <li *ngFor="let cols of rows" class="row no-gutters">
+      <div *ngFor="let col of cols" class="col-4" appDarkenOnHover intensity="85%">
+        <app-card [title]="">
+          <app-photo
+            [url]="col.url"
+            [alt]="col.alt"
+            width="400"
+            height="400">
+          </app-photo>
+          <div class="text-center p-1">
+            <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2"></i>{{col.likes}}
+            <i aria-hidden="true" class="fa fa-comment-o fa-1x mr-2"></i>{{col.comments}}
+          </div>
+        </app-card>
       </div>
     </li>
   </ol>

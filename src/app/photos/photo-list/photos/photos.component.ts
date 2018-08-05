@@ -1,4 +1,4 @@
-import { Photo } from './../../photo/photo';
+import { Photo } from '../../photo/photo';
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
