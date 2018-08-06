@@ -1,0 +1,15 @@
+<header class="fixed-top">
+  <nav class="navbar navbar-light bg-white">
+    <a class="navbar-brand">AL</a>
+    <div *ngIf="user; else login">
+      <i class="fa fa-user-circle"> </i>
+      <a> {{ user?.name }} </a>
+      <a (click)="logout()">(Logout)</a>
+    </div>
+    <ng-template #login>
+      <div>
+        <a [routerLink]="['']">Please, Login</a>        
+      </div>
+    </ng-template>
+  </nav>
+</header>

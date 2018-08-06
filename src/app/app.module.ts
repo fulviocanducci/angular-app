@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { PhotosModule } from './photos/photos.module';
 import { HomeModule } from './home/home.module';
+import { CoreModule } from './core/core.module';
+import { MenuModule } from './menu/menu.module';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { HomeModule } from './home/home.module';
     PhotosModule,
     AppRoutingModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    CoreModule,
+    MenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
