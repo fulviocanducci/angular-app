@@ -2,7 +2,8 @@ import { OnInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthService } from './../../core/auth.service';
+import { AuthService } from '../../core/auth/auth.service';
+import { PlatformDetectorService } from './../../core/platform-detector/platform-detector.service';
 
 
 @Component ({
@@ -17,7 +18,8 @@ export class SigninComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private platformdetectorService: PlatformDetectorService
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +41,7 @@ export class SigninComponent implements OnInit {
           err => {
             console.log(err);
             this.loginForm.reset();
-            this.userNameInput.nativeElement.focus();
+            this.platformdetectorService.isPlatformBroswer() && this.userNameInput.nativeElement.focus();
           }
         );
     }
