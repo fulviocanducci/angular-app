@@ -6,9 +6,9 @@ import { NgModule } from '@angular/core';
 
 import { PhotosComponent } from './photos/photos.component';
 import { LoadButtonComponent } from './load-button/load-button.component';
-import { CardModule } from './../../shared/components/card/card.module';
+import { CardModule } from '../../shared/components/card/card.module';
 import { SearchComponent } from './search/search.component';
-import { DarkenOnHoverModule } from './../../shared/directives/darken-on-hover/darken-on-hover.module';
+import { DarkenOnHoverModule } from '../../shared/directives/darken-on-hover/darken-on-hover.module';
 
 @NgModule({
   declarations: [
